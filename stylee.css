@@ -1,31 +1,134 @@
-body {
-  background: linear-gradient(to right, #74ebd5, #acb6e5);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
+/* 🌈 Style moderne pour Quiz Ines */
+
+/* Couleurs principales */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c63ff;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --background-color: #f4f6fc;
+  --text-color: #333;
 }
 
-.container {
+/* Corps du site */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6c63ff, #007bff);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Conteneur principal */
+.quiz-container {
   background: #fff;
-  padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   width: 90%;
   max-width: 600px;
+  padding: 30px 40px;
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
-.btn {
-  border-radius: 30px;
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#timer {
-  color: #e74c3c;
-  font-size: 1.2em;
+/* Titre principal */
+.quiz-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
 }
 
-#options button {
-  margin: 5px;
-  width: 100%;
+/* Boutons */
+button {
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
+
+button:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Question */
+.question {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option {
+  background: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.option:hover {
+  background: #e8ecff;
+}
+
+.option.correct {
+  background-color: var(--success-color);
+  color: #fff;
+  border-color: var(--success-color);
+}
+
+.option.wrong {
+  background-color: var(--error-color);
+  color: #fff;
+  border-color: var(--error-color);
+}
+
+/* Timer */
+.timer {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Résultat final */
+.result {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result h2 {
+  color: var(--secondary-color);
