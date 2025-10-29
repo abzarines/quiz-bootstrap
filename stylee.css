@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+}
+
+.btn {
+  border-radius: 30px;
+}
+
+#timer {
+  color: #e74c3c;
+  font-size: 1.2em;
+}
+
+#options button {
+  margin: 5px;
+  width: 100%;
+}
